@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bias-Free Intelligent ATS</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>Anonymised Application Pipeline</h1>
+        <div class="job-context">Target Profile: <strong>Frontend Engineer (React/JS)</strong></div>
+    </header>
+
+    <div class="app-container">
+        <section class="form-section">
+            <h2>Submit Application</h2>
+            <form id="applyForm">
+                <div class="form-group">
+                    <label for="experience">Years of Experience:</label>
+                    <input type="text" id="experience" placeholder="e.g., 3 years" required>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills (Comma Separated):</label>
+                    <input type="text" id="skills" placeholder="e.g., JavaScript, React, CSS3" required>
+                </div>
+                <button type="submit" class="submit-btn">Evaluate Profile</button>
+            </form>
+        </section>
+
+        <div class="kanban-board">
+            <div class="column" id="applied" ondragover="allowDrop(event)" ondrop="drop(event, 'applied')">
+                <h3>Applied (<span class="count">0</span>)</h3>
+                <div class="card-holder"></div>
+            </div>
+
+            <div class="column" id="screening" ondragover="allowDrop(event)" ondrop="drop(event, 'screening')">
+                <h3>Automated Screening (<span class="count">0</span>)</h3>
+                <div class="card-holder"></div>
+            </div>
+
+            <div class="column" id="interview" ondragover="allowDrop(event)" ondrop="drop(event, 'interview')">
+                <h3>Interviews (<span class="count">0</span>)</h3>
+                <div class="card-holder"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
